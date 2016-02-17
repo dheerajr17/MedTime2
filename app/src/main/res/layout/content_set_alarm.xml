@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -31,7 +32,7 @@
         android:paddingLeft="40dp"
         android:paddingTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content">//make dialog pop up
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,13 +49,31 @@
             android:text="Night"
             android:id="@+id/night"/>
     </LinearLayout>
-    <TextView
-        android:paddingTop="40dp"
+    <EditText
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:id="@+id/medInstructions"
+        android:gravity="center"
+        android:layout_gravity="center"
+        />
+
+
+    <info.hoang8f.widget.FButton
+        android:layout_marginTop="30dp"
+        android:id="@+id/setAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shapes"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:layout_gravity="center"/>
+        android:textColor="#FFFFFF"
+        android:text="Set Alarm"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        fbutton:buttonColor="@color/button"
+        fbutton:shadowColor="@color/buttonShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp"
+        fbutton:cornerRadius="10dp"
+        />
 
 </LinearLayout>
