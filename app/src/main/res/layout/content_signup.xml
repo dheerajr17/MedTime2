@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="Enter "
             android:gravity="center"
-            android:id="@+id/username"
+            android:id="@+id/user"
             android:layout_gravity="center"
              />
         </android.support.v7.widget.CardView>
