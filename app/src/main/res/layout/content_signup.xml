@@ -4,6 +4,7 @@
     xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@drawable/full"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -13,25 +14,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        >
+        android:id="@+id/linearLayout2">
         <android.support.v7.widget.CardView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:alpha=".75"
-            card_view:cardBackgroundColor="#AAAAAA">
-        <!--<TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="User Name:"
-            android:textSize="20sp"
-            android:layout_below="@+id/linearLayout"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="62dp" />-->
+            android:alpha="0.80"
+
+            card_view:cardBackgroundColor="#BD0306">
+
         <EditText
-            android:paddingTop="40dp"
+            android:paddingTop="70dp"
             android:layout_width="match_parent"
+            android:textColor="#F5F2D6"
+            android:textSize="25dp"
+
             android:layout_height="wrap_content"
             android:text="Enter username"
             android:gravity="center"
@@ -39,61 +37,90 @@
             android:layout_gravity="center"
              />
         </android.support.v7.widget.CardView>
-        <EditText
-            android:paddingTop="40dp"
+        <android.support.v7.widget.CardView
+            android:alpha="0.80"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            card_view:cardBackgroundColor="#BD0306">
+        <EditText
+            android:paddingTop="70dp"
+            android:layout_width="match_parent"
+            android:textSize="25dp"
+            android:textColor="#F5F2D6"
             android:layout_height="wrap_content"
             android:text="Enter password"
             android:gravity="center"
             android:id="@+id/password"
             android:layout_gravity="center"
              />
-        <EditText
-            android:paddingTop="40dp"
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:alpha="0.80"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            card_view:cardBackgroundColor="#BD0306">
+        <EditText
+            android:paddingTop="70dp"
+            android:layout_width="match_parent"
+            android:textSize="25dp"
+            android:textColor="#F5F2D6"
+
             android:layout_height="wrap_content"
             android:text="Confirm Password"
             android:gravity="center"
             android:id="@+id/confirmPassword"
             android:layout_gravity="center"
             />
-        <EditText
-            android:paddingTop="40dp"
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:alpha="0.80"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            card_view:cardBackgroundColor="#BD0306">
+        <EditText
+            android:paddingTop="70dp"
+            android:layout_width="match_parent"
+            android:textSize="25dp"
+            android:layout_height="wrap_content"
             android:text="Enter email ID"
+            android:textColor="#F5F2D6"
             android:gravity="center"
             android:id="@+id/email"
             android:layout_gravity="center"
             />
-
-        <info.hoang8f.widget.FButton
-            android:id="@+id/signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:text="Sign Up"
-            android:textSize="50sp"
-            android:layout_gravity="center"
-            fbutton:buttonColor="@color/button"
-            fbutton:shadowColor="@color/buttonShadow"
-            fbutton:shadowEnabled="true"
-            fbutton:shadowHeight="5dp"
-            fbutton:cornerRadius="10dp"
-             />
-        <!--<Button
-            android:paddingTop="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:textSize="40sp"
-            android:id="@+id/signUp"
-            android:layout_gravity="center"
-            />-->
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
+    <info.hoang8f.widget.FButton
 
-
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="SignUp"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:alpha=".75"
+        fbutton:buttonColor="#D9040B"
+        fbutton:shadowColor="@color/buttonShadow"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp"
+        android:paddingRight="25dp"
+        android:paddingLeft="25dp"
+        fbutton:cornerRadius="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
