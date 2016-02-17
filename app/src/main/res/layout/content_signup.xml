@@ -26,7 +26,7 @@
             android:paddingTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter user name"
+            android:text="Enter jhkjj"
             android:gravity="center"
             android:id="@+id/username"
             android:layout_gravity="center"
