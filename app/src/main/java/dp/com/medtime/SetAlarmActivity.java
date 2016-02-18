@@ -1,5 +1,8 @@
 package dp.com.medtime;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import java.util.Calendar;
+
 import info.hoang8f.widget.FButton;
 
 public class SetAlarmActivity extends AppCompatActivity implements View.OnClickListener{
@@ -16,6 +21,8 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
     RadioButton morning,afternoon,night;
     EditText medName,medDays;
     EditText dosage1,dosage2,dosage3;
+    AlarmManager alarmManager;
+    PendingIntent pendingIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +47,13 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.setAlarm:
+                alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                Intent myIntent = new Intent(this, AlarmReceiver.class);
+                pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(Calendar.HOUR_OF_DAY, 8);
+                calendar.set(Calendar.MINUTE, 0);
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 break;
             case R.id.morning:
                 dosage1.setEnabled(true);
