@@ -51,7 +51,7 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
                 Intent myIntent = new Intent(this, AlarmReceiver.class);
                 pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
                 Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.HOUR_OF_DAY, 8);
+                calendar.set(Calendar.HOUR_OF_DAY,8);
                 calendar.set(Calendar.MINUTE, 0);
                 alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 break;
