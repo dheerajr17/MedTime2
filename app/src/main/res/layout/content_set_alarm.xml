@@ -31,6 +31,7 @@
     <LinearLayout
         android:paddingLeft="40dp"
         android:paddingTop="40dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">//make dialog pop up
         <RadioButton

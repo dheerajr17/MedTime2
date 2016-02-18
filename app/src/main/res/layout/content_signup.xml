@@ -16,6 +16,7 @@
         android:orientation="vertical"
         android:id="@+id/linearLayout2">
         <android.support.v7.widget.CardView
+            android:layout_marginBottom="20dp"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
@@ -38,6 +39,7 @@
              />
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:layout_marginBottom="20dp"
             android:alpha="0.80"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -58,6 +60,7 @@
              />
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:layout_marginBottom="20dp"
             android:alpha="0.80"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -66,7 +69,7 @@
 
             card_view:cardBackgroundColor="#BD0306">
         <EditText
-            android:paddingTop="70dp"
+            android:paddingTop="20dp"
             android:layout_width="match_parent"
             android:textSize="25dp"
             android:textColor="#F5F2D6"
@@ -79,21 +82,21 @@
             />
     </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
+            android:layout_marginBottom="20dp"
             android:alpha="0.80"
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             card_view:cardBackgroundColor="#BD0306">
         <EditText
-            android:paddingTop="70dp"
+            android:paddingTop="20dp"
             android:layout_width="match_parent"
             android:textSize="25dp"
             android:layout_height="wrap_content"
             android:text="Enter email ID"
             android:textColor="#F5F2D6"
-            android:gravity="center"
+            android:gravity="center_horizontal|center_vertical"
             android:id="@+id/email"
             android:layout_gravity="center"
             />
