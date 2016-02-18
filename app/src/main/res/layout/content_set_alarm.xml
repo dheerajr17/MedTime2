@@ -29,28 +29,68 @@
         android:layout_gravity="center"
         />
     <LinearLayout
-        android:paddingLeft="40dp"
-        android:paddingTop="40dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">//make dialog pop up
-        <RadioButton
+        <LinearLayout
+            android:orientation="horizontal"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:id="@+id/morning"
-            android:text="Morning"/>
+            android:text="Morning   "/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:id="@+id/dosage1"
+                android:text=" Enter dosage"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <RadioButton
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/afternoon"
-            android:text="Afternoon"/>
+            android:layout_weight="3"
+            android:text="Afternoon"
+            android:checked="false" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dosage2"
+                android:layout_weight="3"
+                android:text="Enter dosage"/>
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
         <RadioButton
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Night"
+            android:text="Night        "
+            android:layout_weight="3"
             android:id="@+id/night"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dosage3"
+                    android:layout_weight="3"
+                    android:text="Enter dosage"/>
+            </LinearLayout>
+
     </LinearLayout>
     <EditText
+
         android:paddingTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
