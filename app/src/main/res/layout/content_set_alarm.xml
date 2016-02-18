@@ -23,8 +23,7 @@
         android:paddingTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No: of days
-        (type 0 for indefinite time)"
+        android:text="No: of days (0-30)"
         android:gravity="center"
         android:id="@+id/medDays"
         android:layout_gravity="center"
@@ -32,7 +31,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">//make dialog pop up
+        android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="horizontal"
 
