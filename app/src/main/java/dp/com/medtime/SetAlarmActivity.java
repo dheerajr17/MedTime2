@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -41,31 +42,48 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
         dosage1.setEnabled(false);
         dosage2.setEnabled(false);
         dosage3.setEnabled(false);
+        alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        setAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(SetAlarmActivity.this, AlarmReceiver.class);
+                pendingIntent = PendingIntent.getBroadcast(SetAlarmActivity.this, 0, myIntent, 0);
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(Calendar.HOUR_OF_DAY,8);
+                calendar.set(Calendar.MINUTE, 0);
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                Toast.makeText(SetAlarmActivity.this,"Alarm set",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.setAlarm:
-                alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                Intent myIntent = new Intent(this, AlarmReceiver.class);
+           /* case R.id.setAlarm:
+
+                *//*Intent myIntent = new Intent(this, AlarmReceiver.class);
                 pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.HOUR_OF_DAY,8);
                 calendar.set(Calendar.MINUTE, 0);
                 alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                break;
+                Toast.makeText(this,"Alarm set",Toast.LENGTH_LONG).show();*//*
+                break;*/
             case R.id.morning:
                 dosage1.setEnabled(true);
                 dosage1.setText("");
+                dosage1.setFocusable(true);
                 break;
             case R.id.afternoon:
                 dosage2.setEnabled(true);
                 dosage2.setText("");
+                dosage2.setFocusable(true);
                 break;
             case R.id.night:
                 dosage3.setEnabled(true);
                 dosage3.setText("");
+                dosage3.setFocusable(true);
                 break;
             case R.id.medName:
                 medName.setText("");
