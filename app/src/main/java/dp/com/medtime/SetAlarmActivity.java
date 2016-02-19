@@ -20,7 +20,7 @@ import info.hoang8f.widget.FButton;
 public class SetAlarmActivity extends AppCompatActivity implements View.OnClickListener{
     FButton setAlarm;
     RadioButton morning,afternoon,night;
-    EditText medName,medDays;
+    EditText medName,medDays,medInstructions;
     EditText dosage1,dosage2,dosage3;
     AlarmManager alarmManager;
     PendingIntent pendingIntent;
@@ -36,6 +36,7 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
         night=(RadioButton)findViewById(R.id.night);
         medName=(EditText)findViewById(R.id.medName);
         medDays=(EditText)findViewById(R.id.medDays);
+        medInstructions=(EditText)findViewById(R.id.medInstructions);
         dosage1=(EditText)findViewById(R.id.dosage1);
         dosage2=(EditText)findViewById(R.id.dosage2);
         dosage3=(EditText)findViewById(R.id.dosage3);
@@ -43,67 +44,29 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
         dosage2.setEnabled(false);
         dosage3.setEnabled(false);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        setAlarm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(SetAlarmActivity.this, AlarmReceiver.class);
-                pendingIntent = PendingIntent.getBroadcast(SetAlarmActivity.this, 0, myIntent, 0);
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.HOUR_OF_DAY,8);
-                calendar.set(Calendar.MINUTE, 0);
-                alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                Toast.makeText(SetAlarmActivity.this,"Alarm set",Toast.LENGTH_LONG).show();
-            }
-        });
-        medName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                medName.setText("");
-            }
-        });
-        medDays.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                medDays.setText("");
-            }
-        });
-        morning.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dosage1.setEnabled(true);
-                dosage1.setText("");
-            }
-        });
-        afternoon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dosage2.setEnabled(true);
-                dosage2.setText("");
-            }
-        });
-        night.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dosage3.setEnabled(true);
-                dosage3.setText("");
-            }
-        });
+        setAlarm.setOnClickListener(this);
+        medName.setOnClickListener(this);
+        medDays.setOnClickListener(this);
+        morning.setOnClickListener(this);
+        afternoon.setOnClickListener(this);
+        night.setOnClickListener(this);
+        medInstructions.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-           /* case R.id.setAlarm:
+            case R.id.setAlarm:
 
-                *//*Intent myIntent = new Intent(this, AlarmReceiver.class);
+                Intent myIntent = new Intent(this, AlarmReceiver.class);
                 pendingIntent = PendingIntent.getBroadcast(this, 0, myIntent, 0);
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(Calendar.HOUR_OF_DAY,8);
                 calendar.set(Calendar.MINUTE, 0);
                 alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-                Toast.makeText(this,"Alarm set",Toast.LENGTH_LONG).show();*//*
-                break;*/
-            /*case R.id.morning:
+                Toast.makeText(this,"Alarm set",Toast.LENGTH_LONG).show();
+                break;
+            case R.id.morning:
                 dosage1.setEnabled(true);
                 dosage1.setText("");
 
@@ -117,13 +80,15 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
                 dosage3.setEnabled(true);
                 dosage3.setText("");
 
-                break;*/
-            /*case R.id.medName:
+                break;
+            case R.id.medName:
                 medName.setText("");
                 break;
             case R.id.medDays:
                 medDays.setText("");
-                break;*/
+                break;
+            case R.id.medInstructions:
+                medInstructions.setText("");
         }
     }
 }
