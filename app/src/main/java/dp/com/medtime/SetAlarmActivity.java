@@ -55,6 +55,39 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(SetAlarmActivity.this,"Alarm set",Toast.LENGTH_LONG).show();
             }
         });
+        medName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                medName.setText("");
+            }
+        });
+        medDays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                medDays.setText("");
+            }
+        });
+        morning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dosage1.setEnabled(true);
+                dosage1.setText("");
+            }
+        });
+        afternoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dosage2.setEnabled(true);
+                dosage2.setText("");
+            }
+        });
+        night.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dosage3.setEnabled(true);
+                dosage3.setText("");
+            }
+        });
     }
 
     @Override
@@ -70,27 +103,27 @@ public class SetAlarmActivity extends AppCompatActivity implements View.OnClickL
                 alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 Toast.makeText(this,"Alarm set",Toast.LENGTH_LONG).show();*//*
                 break;*/
-            case R.id.morning:
+            /*case R.id.morning:
                 dosage1.setEnabled(true);
                 dosage1.setText("");
-                dosage1.setFocusable(true);
+
                 break;
             case R.id.afternoon:
                 dosage2.setEnabled(true);
                 dosage2.setText("");
-                dosage2.setFocusable(true);
+
                 break;
             case R.id.night:
                 dosage3.setEnabled(true);
                 dosage3.setText("");
-                dosage3.setFocusable(true);
-                break;
-            case R.id.medName:
+
+                break;*/
+            /*case R.id.medName:
                 medName.setText("");
                 break;
             case R.id.medDays:
                 medDays.setText("");
-                break;
+                break;*/
         }
     }
 }

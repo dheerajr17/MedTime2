@@ -30,7 +30,7 @@
             card_view:cardBackgroundColor="#BD0306"
             card_view:cardCornerRadius="15dp"
             card_view:cardElevation="25dp">
-            >
+
 
         <EditText
             android:paddingTop="50dp"
@@ -55,8 +55,8 @@
 
             card_view:cardBackgroundColor="#BD0306"
             card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="25dp">>
-        <EditText
+            card_view:cardElevation="25dp">
+            <EditText
             android:paddingTop="50dp"
             android:layout_width="match_parent"
             android:textSize="25dp"
@@ -78,7 +78,7 @@
 
             card_view:cardBackgroundColor="#BD0306"
             card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="25dp">>
+            card_view:cardElevation="25dp">
         <EditText
             android:paddingTop="50dp"
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             card_view:cardBackgroundColor="#BD0306"
             card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="25dp">>
+            card_view:cardElevation="25dp">
         <EditText
             android:paddingTop="50dp"
             android:layout_width="match_parent"
