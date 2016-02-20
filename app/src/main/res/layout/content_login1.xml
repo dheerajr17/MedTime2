@@ -25,8 +25,7 @@
             android:alpha="0.75"
             card_view:cardBackgroundColor="#BD0306"
             card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="25dp">
-        >
+            card_view:cardElevation="25dp">>
         <EditText
             android:paddingTop="60dp"
             android:layout_width="match_parent"
